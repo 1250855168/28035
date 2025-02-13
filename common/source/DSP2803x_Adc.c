@@ -105,6 +105,8 @@ InitAdc(void)
     EDIS;
 
     DELAY_US(ADC_usDELAY);         // Delay before converting ADC channels
+
+    InitAdcAio();
 }
 
 //
@@ -137,8 +139,8 @@ InitAdcAio()
 // register. VREFLO is sampled by the ADC using an internal MUX select which
 // connects VREFLO to A5 without sacrificing an external ADC pin. This function
 // calls two other functions:
-//   - AdcChanSelect(channel) – selects the ADC channel to convert
-//   - AdcConversion() – initiates several ADC conversions and returns
+//   - AdcChanSelect(channel) ï¿½ selects the ADC channel to convert
+//   - AdcConversion() ï¿½ initiates several ADC conversions and returns
 //                       the average
 //
 void 

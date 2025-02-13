@@ -155,9 +155,9 @@ SECTIONS
    ramfuncs            : LOAD = FLASHD,
                          RUN = RAML0,
                          LOAD_START(_RamfuncsLoadStart),
-                         LOAD_SIZE(_RamfuncsLoadSize),
+                         LOAD_END(_RamfuncsLoadEnd),
                          RUN_START(_RamfuncsRunStart),
-                         PAGE = 0
+						 PAGE = 0
 
    csmpasswds          : > CSM_PWL_P0  PAGE = 0
    csm_rsvd            : > CSM_RSVD    PAGE = 0
