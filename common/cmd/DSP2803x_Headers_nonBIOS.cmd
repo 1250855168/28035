@@ -125,6 +125,9 @@ MEMORY
 
    CSM_PWL     : origin = 0x3F7FF8, length = 0x000008     /* Part of FLASHA.  CSM password locations. */
 
+   CLAtoCPUMSGRAM    : origin = 0x01480, length = 0x000080
+
+   CPUtoCLAMSGRAM    : origin = 0x01500, length = 0x000080
 }
 
 
@@ -197,6 +200,10 @@ SECTIONS
 
 /*** Device Part ID Register Structures ***/
    PartIdRegsFile    : > PARTID,   PAGE = 1
+
+   //cla
+   ClatoCpuVarFile   : > CLAtoCPUMSGRAM,     PAGE = 1
+   CputoClaVarFile   : > CPUtoCLAMSGRAM,     PAGE = 1
 
 }
 

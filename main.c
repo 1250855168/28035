@@ -26,7 +26,9 @@ int main(void)
     InitSysCtrl();
 
   	MemCopy(&RamfuncsLoadStart, &RamfuncsLoadEnd,
-  	               &RamfuncsRunStart);
+  	        &RamfuncsRunStart);
+	MemCopy(&Cla1funcsLoadStart, &Cla1funcsLoadEnd,
+	               &Cla1funcsRunStart);
 
     InitFlash();
 
@@ -82,6 +84,7 @@ int main(void)
     init_timer();
     init_xint();
     init_gpio_out();
+    init_cla();
 
     //中断地址入口
     EALLOW;  // This is needed to write to EALLOW protected registers

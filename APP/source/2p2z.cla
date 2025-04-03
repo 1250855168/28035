@@ -1,0 +1,43 @@
+/*
+ * main.cla
+ *
+ *  Created on: 2025Äê4ÔÂ3ÈÕ
+ *      Author: ych
+ */
+#include"cla.h"
+#include"main.h"
+
+#pragma DATA_SECTION(CputoClaVar,"CputoClaVarFile");
+volatile struct CputoClaVarStruct CputoClaVar;
+
+#pragma DATA_SECTION(ClatoCpuVar,"ClatoCpuVarFile");
+volatile struct ClatoCpuVarStruct ClatoCpuVar;
+
+__interrupt void
+Cla1Task1 ( void )
+{
+    //
+    // Local Variables
+    //
+
+    //
+    // Code
+    //
+    __mdebugstop();
+
+    //__mnop();
+    //__mnop();
+    //__mnop();
+}
+
+__interrupt void Cla1Task2 ( void )
+{
+
+    __mdebugstop();
+
+    GPIO3_SET();
+
+    //__mnop();
+    //__mnop();
+    //__mnop();
+}

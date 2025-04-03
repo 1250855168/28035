@@ -15,5 +15,6 @@
 #include"xint.h"
 #include"gpio_out.h"
 #include"timer.h"
+#include"cla.h"
 
 #endif /* APP_INCLUDE_MAIN_H_ */
