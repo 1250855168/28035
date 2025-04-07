@@ -23,7 +23,12 @@ Cla1Task1 ( void )
     //
     // Code
     //
-    __mdebugstop();
+    //__mdebugstop();
+
+	if(CputoClaVar.test ==1)
+	{
+		ClatoCpuVar.test = 0;
+	}
 
     //__mnop();
     //__mnop();
@@ -33,9 +38,8 @@ Cla1Task1 ( void )
 __interrupt void Cla1Task2 ( void )
 {
 
-    __mdebugstop();
-
-    GPIO3_SET();
+    //__mdebugstop();
+	ClatoCpuVar.test = 1;
 
     //__mnop();
     //__mnop();

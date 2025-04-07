@@ -44,15 +44,14 @@ __interrupt void Cla1Task2();
 
 struct CputoClaVarStruct
 {
-
+	Uint16 test;
 };
 extern volatile struct CputoClaVarStruct CputoClaVar;
 
 
 struct ClatoCpuVarStruct
 {
-
-
+	Uint16 test;
 };
 extern volatile struct ClatoCpuVarStruct ClatoCpuVar;
 

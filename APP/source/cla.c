@@ -18,6 +18,9 @@ void init_cla()
 	// Map CLA program memory to the CLA
 	Cla1Regs.MMEMCFG.bit.PROGE = 1;
 
+	Cla1Regs.MMEMCFG.bit.RAM0E = 1;
+	Cla1Regs.MMEMCFG.bit.RAM1E = 1;
+
 	// Enable IACK to start tasks via software
 	Cla1Regs.MCTL.bit.IACKE = 1;
 

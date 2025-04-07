@@ -120,7 +120,11 @@ int main(void)
     //
     for(;;)
     {
-
+    	if(ClatoCpuVar.test == 1)
+    	{
+    		CputoClaVar.test = 1;
+            GPIO3_SET();
+    	}
     }
 
 
