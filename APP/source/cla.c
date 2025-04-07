@@ -23,6 +23,10 @@ void init_cla()
 	Cla1Regs.MMEMCFG.bit.RAM1E = 1; // 启用数据 RAM
 
 	// 使能 IACK，允许软件触发任务
+	Cla1Regs.MMEMCFG.bit.RAM0E = 1;
+	Cla1Regs.MMEMCFG.bit.RAM1E = 1;
+
+	// 使能 IACK，允许软件触发任务
 	Cla1Regs.MCTL.bit.IACKE = 1;
 
 	// 使能任务1和任务2
